@@ -91,12 +91,12 @@ def enableProguardInReleaseBuilds = false
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    buildToolsVersion '26'
 
     defaultConfig {
         applicationId "com.discourse"
         minSdkVersion 19
-        targetSdkVersion 19
+        targetSdkVersion 24
         versionCode 22
         versionName MYAPP_VERSION
         ndk {
@@ -158,7 +158,7 @@ buildscript {
   }
 }
 
-apply plugin: 'io.fabric'
+//apply plugin: 'io.fabric'
 
 repositories {
   maven { url 'https://maven.fabric.io/public' }
@@ -173,10 +173,13 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:customtabs:25.3.1'
     compile 'com.facebook.react:react-native:+'  // From node_modules
-    compile 'com.google.firebase:firebase-core:11.0.1'
-    compile 'com.google.firebase:firebase-analytics:11.0.1'
-    compile 'com.google.firebase:firebase-messaging:11.0.1'
-    compile 'com.google.android.gms:play-services-gcm:11.0.1'
+    compile 'com.google.firebase:firebase-core:11.0.2'
+    compile 'com.google.firebase:firebase-analytics:11.0.2'
+    compile 'com.google.firebase:firebase-messaging:11.0.2'
+    compile 'com.google.firebase:firebase-database:11.0.2'
+    compile 'com.google.android.gms:play-services-gcm:11.0.2'
+    compile 'com.google.android.gms:play-services-base:11.0.2'
+    compile 'com.google.android.gms:play-services-analytics:11.0.2'
     compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
       transitive = true;
     }
